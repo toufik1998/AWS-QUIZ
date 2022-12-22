@@ -1,0 +1,407 @@
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+.quiz-app .submit-button {
+  background: linear-gradient(to right, #de6262, #ffb88c);
+  display: block;
+  width: 90%;
+  padding: 15px;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+  margin: auto;
+  font-family: "Cairo", sans-serif;
+}
+.quiz-app .submit-button:focus {
+  outline: none;
+}
+.quiz-app .other-exam {
+  background: linear-gradient(to right, #de6262, #ffb88c);
+  padding: 13px;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  font-family: "Cairo", sans-serif;
+}
+.quiz-app .other-exam:focus {
+  outline: none;
+}
+
+.quiz-app .bullets {
+  border-top: 1px solid #dfdfdf;
+  background-color: #2F2F2F;
+  display: flex;
+  padding: 20px;
+  margin-top: 1rem;
+}
+.quiz-app .bullets .spans {
+  flex: 1;
+  display: flex;
+}
+.quiz-app .bullets .spans span {
+  width: 20px;
+  height: 20px;
+  background-color: #1C2025;
+  margin-right: 5px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.quiz-app .bullets .spans span.on {
+  background: linear-gradient(to right, #EEC9AB, #39434B);
+}
+.quiz-app .bullets .countdown {
+  color: #fff;
+}
+
+.main {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.head {
+  text-align: center;
+}
+
+.head_1 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #333;
+}
+.head_1 span {
+  color: #ff4732;
+}
+
+.head_2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-top: 3px;
+}
+
+ul {
+  display: flex;
+  margin-top: 30px;
+}
+ul li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ul li .icon {
+  font-size: 35px;
+  color: #ff4732;
+  margin: 0 60px;
+}
+ul li .text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ff4732;
+}
+ul li .progress {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(68, 68, 68, 0.781);
+  margin: 14px 0;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  position: relative;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+ul li .progress .uil {
+  display: none;
+}
+ul li .progress p {
+  font-size: 13px;
+}
+ul li .active {
+  background-color: #ff4732;
+  display: grid;
+  place-items: center;
+}
+ul li .active p {
+  display: none;
+}
+ul li .active .uil {
+  font-size: 20px;
+  display: flex;
+}
+
+.progress::after {
+  content: " ";
+  position: absolute;
+  width: 125px;
+  height: 5px;
+  background-color: rgba(68, 68, 68, 0.781);
+  right: 30px;
+}
+
+.one::after {
+  width: 0;
+  height: 0;
+}
+
+li .active::after {
+  background-color: #ff4732;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  background-color: #1C2025;
+}
+
+/* Here we start styling the section of quiz info */
+.quiz-app {
+  width: 800px;
+  margin: 20px auto;
+  background-color: #39434B;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.quiz-app .quiz-info {
+  padding: 20px;
+  background-color: #2F2F2F;
+  display: flex;
+  color: #fff;
+}
+.quiz-app .quiz-info .category {
+  flex: 1;
+}
+.quiz-app .quiz-info .count {
+  flex: 1;
+  text-align: right;
+}
+
+/* here we will start styling the section of quiz area */
+.quiz-app .quiz-area {
+  background-color: #2F2F2F;
+  padding: 20px;
+  margin-top: 1rem;
+}
+.quiz-app .quiz-area h3 {
+  margin: 0;
+  color: #fff;
+}
+.quiz-app .answer-area {
+  background-color: #39434B;
+  margin-bottom: 1.3rem;
+  margin-top: 1rem;
+}
+.quiz-app .answer-area .answer {
+  background-color: #2F2F2F;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+.quiz-app .answer-area .answer input[type=radio]:checked + label {
+  color: #ff4732;
+}
+.quiz-app .answer-area .answer label {
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+  font-size: 0.9rem;
+  margin-left: 5px;
+  position: relative;
+  top: -1px;
+}
+.quiz-app .answer-area .answer:not(:last-child) {
+  border-bottom: 1px solid #dfdfdf;
+}
+
+/* Here we will start styling last section (Quiz Result) */
+.quiz-app .results {
+  display: block;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.quiz-app .results span {
+  font-weight: bold;
+}
+.quiz-app .results span.bad {
+  color: red;
+}
+.quiz-app .results span.good {
+  color: #009688;
+}
+.quiz-app .results .quiz-app .results span.perfect {
+  color: #0075ff;
+}
+
+.explanation {
+  width: 800px;
+  margin: 20px auto;
+  background-color: #39434B;
+  padding: 1rem;
+  color: #fff;
+}
+.explanation h3 {
+  color: #ff4732;
+}
+.explanation .incorrect-answer .answer {
+  padding: 3px 10px;
+  background-color: #2F2F2F;
+  border-bottom: 1px solid #dfdfdf;
+}
+.explanation .incorrect-answer .answer p span {
+  width: 30px;
+  height: 30px;
+  background-color: #ff4732;
+  color: #fff;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.explanation .incorrect-answer .explain-answer {
+  margin-top: 1rem;
+  padding: 3px 20px;
+  background-color: #2F2F2F;
+  border-bottom: 1px solid #dfdfdf;
+  margin-bottom: 2rem;
+}
+
+.main {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.head {
+  text-align: center;
+}
+
+.head_1 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #333;
+}
+.head_1 span {
+  color: #ff4732;
+}
+
+.head_2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-top: 3px;
+}
+
+ul {
+  display: flex;
+  margin-top: 30px;
+}
+ul li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ul li .icon {
+  font-size: 35px;
+  color: #ff4732;
+  margin: 0 60px;
+}
+ul li .text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ff4732;
+}
+ul li .progress {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(68, 68, 68, 0.781);
+  margin: 14px 0;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  position: relative;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+ul li .progress .uil {
+  display: none;
+}
+ul li .progress p {
+  font-size: 13px;
+}
+ul li .active {
+  background-color: #ff4732;
+  display: grid;
+  place-items: center;
+}
+ul li .active p {
+  display: none;
+}
+ul li .active .uil {
+  font-size: 20px;
+  display: flex;
+}
+
+.progress::after {
+  content: " ";
+  position: absolute;
+  width: 125px;
+  height: 5px;
+  background-color: rgba(68, 68, 68, 0.781);
+  right: 30px;
+}
+
+.one::after {
+  width: 0;
+  height: 0;
+}
+
+li .active::after {
+  background-color: #ff4732;
+}
+
+.quiz-instructions {
+  width: 90%;
+  margin: 4rem;
+}
+.quiz-instructions h2 {
+  color: red;
+}
+.quiz-instructions p {
+  font-size: 1rem;
+  color: #fff;
+}/*# sourceMappingURL=main.css.map */

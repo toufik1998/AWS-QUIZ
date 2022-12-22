@@ -1,0 +1,52 @@
+[[TODO]]
+[1] => Create Json Object for Questions
+[2] => Start Creating html markup + styling
+[3] => add dumy (static) data
+[4] => Create the styling
+(( get data from json file and put into user interface )) dynamic data
+[5] => fetch number of Questions from JSON object
+[6] => show questions count + Questions category
+(( get data from json file and put into user interface )) dynamic data question title + input radio + label with (DOM)
+(( create function the he check answer from the user and move to the next question))
+(( Get next question))
+(( Show result function ))
+((create function of time out ))
+[7] => show the number of bullets depend on questions count
+[8] => set the number of the write and false response
+[9] => create countdown timer
+[10] => fetch questions from json object
+[11] => show first question
+[12] => check answer and hide question then show next question
+[13] => if the countdown tmer end (mark the answer as wrong and move the next question)
+[14] => add class on bullet after answering the question
+[15] => if the questions is finished (show the result)
+
+[[IDEAS]] 
+[1] => many json objects and choose language
+[2] => add many questions and choose only 10 randomly
+[3] => randomize answers (shflle function)
+
+[[IN PROGRESSE]]
+(( get data from json file and put into user interface )) dynamic data question title + input radio + label with (DOM)
+(( create function the he check answer from the user and move to the next question))
+(( Get next question))
+(( Show result function ))
+
+
+
+[7] => show the number of bullets depend on questions count
+[8] => set the number of the write and false response 
+
+
+
+[[DONE]]
+[1] => Create Json Object for Questions
+[2] => Start Creating html markup + styling
+[3] => add dumy (static) data
+[4] => Create the styling
+[6] => show questions count + Questions category
+[7] => show the number of bullets depend on questions count (create bullet element)
+
+
+((TOMORROW))
+stepper component ==>> should be finish him

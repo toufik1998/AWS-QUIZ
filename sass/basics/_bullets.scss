@@ -1,0 +1,32 @@
+.quiz-app {
+
+    .bullets{
+        border-top: 1px solid $border-color;
+        background-color: $primary-color;
+        display: flex;
+        padding: 20px;
+        margin-top: 1rem;
+
+        .spans{
+            flex: 1;
+            display: flex;
+
+            span{
+                width: 20px;
+                height: 20px;
+                background-color: #ddd;
+                margin-right: 5px;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+            }
+
+            span.on{
+                background: linear-gradient(to right, #de6262, #ffb88c);
+            }
+        }        
+    }    
+
+}

@@ -1,0 +1,119 @@
+/* Here we will start styling last section (Quiz Result) */
+.quiz-app {
+    .results{
+        display: block;
+        padding: 1rem;
+        text-align: center;
+        font-size: 1.5rem;
+        
+
+        span{
+            font-weight: bold;
+        }
+
+        span.bad{
+            color: $bad-result;
+        }
+
+        span.good{
+            color: $good-result;
+        }
+
+        .quiz-app .results span.perfect{
+            color: $perfect-result;
+        }
+    }
+
+    .explanation{
+        width: 800px;
+        margin: 20px auto;
+        // background-color: $background-app;
+        padding: 1rem;
+
+        h3{
+            color: #ff4732;
+        }
+        
+        .incorrect-answer{
+            .answer{
+                padding: 3px 10px;
+                background-color: $primary-color;
+                border-bottom: 1px solid $border-color;
+                p{
+                    span{
+                        width: 30px;
+                        height: 30px;
+                        background-color: #ff4732;
+                        color: $primary-color;
+                        // display: flex;
+                        // justify-content: center;
+                        // align-items: center;
+                        border-radius: 50%;
+                        -webkit-border-radius: 50%;
+                        -moz-border-radius: 50%;
+                        -ms-border-radius: 50%;
+                        -o-border-radius: 50%;
+                        display: inline-flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+
+            .explain-answer{
+                margin-top: 1rem;
+                padding: 3px 20px;
+                background-color: $primary-color;
+                border-bottom: 1px solid $border-color;
+            }
+        }
+    }
+
+}
+
+.explanation{
+    width: 800px;
+    margin: 20px auto;
+    background-color: $background-app;
+    padding: 1rem;
+
+    h3{
+        color: #ff4732;
+    }
+    
+    .incorrect-answer{
+        margin-bottom: 2rem;
+        border-bottom: 1px solid #ff4732;
+        .answer{
+            padding: 3px 10px;
+            background-color: $primary-color;
+            border-bottom: 1px solid $border-color;
+            p{
+                span{
+                    width: 30px;
+                    height: 30px;
+                    background-color: #ff4732;
+                    color: $primary-color;
+                    // display: flex;
+                    // justify-content: center;
+                    // align-items: center;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+
+        .explain-answer{
+            margin-top: 1rem;
+            padding: 3px 20px;
+            background-color: $primary-color;
+            border-bottom: 1px solid $border-color;
+        }
+    }
+}

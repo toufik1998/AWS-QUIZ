@@ -1,0 +1,42 @@
+.quiz-app {
+
+    .submit-button{
+        // background-color: $secondary-color;
+        background: linear-gradient(to right, #de6262, #ffb88c);
+        display: block;
+        width: 90%;
+        padding: 15px;
+        border: none;
+        color: $primary-color;
+        font-weight: bold;
+        font-size: 1.1rem;
+        cursor: pointer;
+        border-radius: .3rem;
+        -webkit-border-radius: .3rem;
+        -moz-border-radius: .3rem;
+        -ms-border-radius: .3rem;
+        -o-border-radius: .3rem;
+        margin: auto;
+        font-family: 'Cairo', sans-serif;
+
+        &:focus{
+            outline: none;
+        }
+    }
+    
+    .other-exam{
+        background: linear-gradient(to right, #de6262, #ffb88c);
+        padding: 13px;
+        border: none;
+        color: $primary-color;
+        font-weight: bold;
+        font-size: 1.1rem;
+        cursor: pointer;
+        border-radius: .3rem;
+        font-family: 'Cairo', sans-serif;
+
+        &:focus{
+            outline: none;
+        }
+    }
+}

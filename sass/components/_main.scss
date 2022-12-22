@@ -1,0 +1,47 @@
+/* here we will start styling the section of quiz area */
+.quiz-app {
+
+    .quiz-area{
+        background-color: $primary-color;
+        padding: 20px;
+        margin-top: 1rem;
+
+        h3{
+            margin: 0;
+        }
+    }
+
+    .answer-area{
+        background-color: $primary-color;
+        padding: 0 20px 20px;
+        margin-bottom: 1.3rem;
+
+        .answer{
+            background-color: #f9f9f9;
+            padding: 1rem;
+
+            input[type="radio"]:checked + label{
+                color: $secondary-color;
+            }
+
+            label{
+                font-weight: bold;
+                cursor: pointer;
+                color: #777;
+                font-size: .9rem;
+                margin-left: 5px;
+                position: relative;
+                top: -1px;
+            }
+        }
+
+        .answer:not(:last-child) {
+            border-bottom: 1px solid $border-color;
+        }
+    }
+
+    
+
+    
+
+}

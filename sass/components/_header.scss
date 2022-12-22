@@ -1,0 +1,29 @@
+body{
+    font-family: 'Cairo', sans-serif;
+}
+
+/* Here we start styling the section of quiz info */
+.quiz-app{
+    width: 800px;
+    margin: 20px auto;
+    background-color: $background-app;
+    padding: 1rem;
+
+    .quiz-info{
+        padding: 20px;
+        background-color: $primary-color;
+        display: flex;
+
+        .category{
+            flex: 1;
+        }
+
+        .count{
+            flex: 1;
+            text-align: right;
+        }
+
+
+    }
+}
+
