@@ -405,3 +405,7 @@ li .active::after {
   font-size: 1rem;
   color: #fff;
 }/*# sourceMappingURL=main.css.map */
+
+.btn-darkmode{
+  color: #fff;
+}

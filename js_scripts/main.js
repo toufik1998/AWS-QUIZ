@@ -17,6 +17,7 @@ let containerResult = document.querySelector('.results');
 let containerCountDown = document.querySelector('.countdown');
 let containerEplanation = document.querySelector('.explanation');
 let incorrectAnswer = document.querySelector('.incorrect-answer');
+let btnDarkMode = document.querySelector('.btn-darkmode');
 
 // Set Options
 let currentIndex = 0;
@@ -24,61 +25,6 @@ let rightAnswerCount = 0;
 let countDownInterval;
 let arrayBadResopone = [];
 let bolckDeplicate = false;
-
-
-// fetch('../aws_questions.json')
-//     .then((response) => {
-//       if (response.status >= 200 && response.status <= 299) {
-//         return response.json();
-//       } else {
-//         throw Error(response.statusText);
-//       }
-//     })
-//     .then((data) => {
-//       let qCount = data.length;
-
-//       // create bullets + set questions count
-//       creatBullets(qCount);
-
-//       // add questions data to user interface
-//       addQuestionData(data[currentIndex], qCount);
-
-//       // start countdown duration
-//       countDown(30, qCount);
-
-//       // click on submit button
-//       submitBtn.onclick = () => {
-//         //  get the right answer
-//         let theRightAnswer = data[currentIndex].right_answer;
-
-//         // increase the current question
-//         currentIndex++;
-
-//         // check the answer
-//         checkAnswer(theRightAnswer, qCount);
-
-//         // empty question title and answers area after the click of submit
-//         containerQuestion.innerHTML = '';
-//         containerAnswers.innerHTML = '';
-
-//         // set the next question after the click submit button
-//         addQuestionData(data[currentIndex], qCount);
-
-//         // handle bullets
-//         handleBullets();
-
-//         // start countdown duration
-//         clearInterval(countDownInterval);
-//         countDown(30, qCount);
-
-//         // Show result
-//         showResult(qCount);
-//       }
-
-//     })
-//     .catch((error) => {
-//       console.log(`Sorry ${error}`);
-//     });
 
 function fetchData() {
     fetch('../aws_questions.json')
@@ -91,11 +37,7 @@ function fetchData() {
     })
     .then((data) => {
       let qCount = data.length;
-    //   for(let i = 0; i < qCount; i++){
-    //     console.log(data[i].right_answer);
-    //   }
 
-    
       // create bullets + set questions count
       creatBullets(qCount);
 
@@ -160,6 +102,7 @@ function creatBullets(num) {
         containerSpans.appendChild(theBullet);
     }
 }
+
 
 function addQuestionData(obj, count) { 
     
@@ -247,7 +190,6 @@ function checkAnswer(rightAnswer, count) {
     // console.log(arrayBadResopone);
 }
 
-// console.log(arrayBadResopone);
 
 function handleBullets() {
     let bulletsSpans = document.querySelectorAll('.bullets .spans span');
@@ -358,18 +300,10 @@ function countDown(duration, count) {
 // steper components script
 one.classList.add("active");
 containerQuizApp.style.display = 'none';
-// one.onclick = function() {
-//     containerQuizApp.style.display = 'none';
-//     containerInstructions.style.display = 'block';
-//     one.classList.add("active");
-//     two.classList.remove("active");
-//     three.classList.remove("active");
-    
-// }
+
 
 two.onclick = function() {
    
-
     if(!bolckDeplicate){
         fetchData();
         containerInstructions.style.display = 'none';
@@ -382,18 +316,8 @@ two.onclick = function() {
     
     bolckDeplicate = true;
 
-
-    
-   
 }
 
-
-// three.onclick = function() {
-//     one.classList.add("active");
-//     two.classList.add("active");
-//     three.classList.add("active");
-    
-// }
 
 function anotherEXam() {
     location.reload();
@@ -412,31 +336,35 @@ if (localStorage.getItem('darkMode')===null){
 const link = document.createElement('link');
 link.rel = 'stylesheet';
 document.getElementsByTagName('HEAD')[0].appendChild(link);
-
-//Or we can create the tag in the HTML and later reference in our code
-//const link=document.getElementsByTagName("link");  
+  
 
 //checkStatus is only called one time in the program, when you reload the page
-//It gives the page it's default look, depening on waht darkMode is set to it will load one css or another
-checkStatus()
+checkStatus();
 
 function checkStatus(){
     if (localStorage.getItem('darkMode')==="true"){
-        check.checked = true;                           //the checkbox is checked (if you load the page by default it isn’t)
-        link.href = 'sass/darkmode.css';                   //since it's true we load the dark theme CSS
+        check.checked = true;                           
+        link.href = 'sass/darkmode.css';                   
+        
     }else{
-        check.checked = false;                          //the checkbox is unchecked
+        check.checked = false;                          
         link.href = 'sass/main.css';
+        
     }
 }
 
-function changeStatus(){                                //This function gets called every time the checkbox is clicked
-    if (localStorage.getItem('darkMode')==="true"){     //if darkMode was active and this function is called it means the user now wants light
-        localStorage.setItem('darkMode', "false");      //so we set it to false, to indicate we are in light mode
+//This function gets called every time the checkbox is clicked
+function changeStatus(){                                
+    if (localStorage.getItem('darkMode')==="true"){     
+        localStorage.setItem('darkMode', "false");      
         link.href = 'sass/main.css';
+        btnDarkMode.style.color = 'dark';
+
     } else{
-        localStorage.setItem('darkMode', "true");       //same code but adapted for dark theme
+        localStorage.setItem('darkMode', "true");       
         link.href = 'sass/darkmode.css';
+        btnDarkMode.style.color = 'white';
+
     }
 }
 
